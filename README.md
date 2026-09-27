@@ -42,6 +42,21 @@ npm run ios
 npm run android
 ```
 
+## Deploy to Vercel
+
+The repository includes `vercel.json`, so Vercel can build the Expo web app and preserve direct links to client-side routes.
+
+1. Push the repository to GitHub.
+2. In Vercel, choose **Add New → Project** and import the repository.
+3. Keep the root directory set to the repository root. The included configuration supplies the build command and output directory.
+4. Select **Deploy**. This prototype does not require environment variables.
+
+Vercel will redeploy automatically after future pushes to the connected production branch. To test the production bundle locally before pushing, run:
+
+```bash
+npm run build:web
+```
+
 Quality checks:
 
 ```bash

@@ -76,6 +76,56 @@ export const transactions: Transaction[] = [
     cardLastFour: '4821', status: 'Completed', icon: 'logo-apple', iconTone: 'purple',
     canonicalMerchant: 'Apple', cardPresent: false, risk: 'low', scenario: 'recurring', history: [],
   },
+  {
+    id: 'tx-tfl', merchant: 'TFL TRAVEL CH', descriptor: 'TFL TRAVEL CH', amount: 8.50,
+    currency: 'EUR', date: '19 Sep 2026', time: '18:44', category: 'Transport',
+    cardLastFour: '4821', status: 'Completed', icon: 'train-outline', iconTone: 'blue',
+    canonicalMerchant: 'Transport for London', cardPresent: false, risk: 'low', scenario: 'recurring',
+    history: [
+      { id: 'tfl-1', date: '18 Sep', amount: 8.50, status: 'Completed' },
+      { id: 'tfl-2', date: '17 Sep', amount: 6.70, status: 'Completed' },
+    ],
+  },
+  {
+    id: 'tx-amazon', merchant: 'AMZN MKTP UK', descriptor: 'AMZN MKTP UK*4D82', amount: 39.99,
+    currency: 'EUR', date: '18 Sep 2026', time: '14:09', category: 'Shopping',
+    cardLastFour: '4821', status: 'Completed', icon: 'cart-outline', iconTone: 'orange',
+    canonicalMerchant: 'Amazon', cardPresent: false, risk: 'low', scenario: 'recurring',
+    history: [{ id: 'amz-1', date: '02 Sep', amount: 21.49, status: 'Completed' }],
+  },
+  {
+    id: 'tx-pret', merchant: 'Pret A Manger', descriptor: 'PRET A MANGER 184', amount: 7.65,
+    currency: 'EUR', date: '18 Sep 2026', time: '08:17', category: 'Restaurants',
+    cardLastFour: '4821', status: 'Completed', icon: 'cafe-outline', iconTone: 'red',
+    canonicalMerchant: 'Pret A Manger', location: 'London, GB', cardPresent: true,
+    risk: 'low', scenario: 'recurring', history: [],
+  },
+  {
+    id: 'tx-netflix', merchant: 'NETFLIX.COM', descriptor: 'NETFLIX.COM 866-579', amount: 17.99,
+    currency: 'EUR', date: '16 Sep 2026', time: '05:02', category: 'Entertainment',
+    cardLastFour: '4821', status: 'Completed', icon: 'play', iconTone: 'black',
+    canonicalMerchant: 'Netflix', cardPresent: false, risk: 'low', scenario: 'recurring',
+    history: [
+      { id: 'net-1', date: '16 Jul', amount: 17.99, status: 'Completed' },
+      { id: 'net-2', date: '16 Aug', amount: 17.99, status: 'Completed' },
+    ],
+  },
+  {
+    id: 'tx-booking', merchant: 'BOOKING.COM', descriptor: 'BOOKING.COM HOTEL', amount: 214.00,
+    currency: 'EUR', date: '15 Sep 2026', time: '20:31', category: 'Travel',
+    cardLastFour: '4821', status: 'Pending', icon: 'airplane-outline', iconTone: 'purple',
+    canonicalMerchant: 'Booking.com', cardPresent: false, risk: 'medium', scenario: 'recurring', history: [],
+  },
+  {
+    id: 'tx-broadband', merchant: 'CITYFIBRE BILLING', descriptor: 'CITYFIBRE BILLING', amount: 31.00,
+    currency: 'EUR', date: '14 Sep 2026', time: '06:15', category: 'Bills',
+    cardLastFour: '4821', status: 'Completed', icon: 'wifi-outline', iconTone: 'green',
+    canonicalMerchant: 'CityFibre', cardPresent: false, risk: 'low', scenario: 'recurring',
+    history: [
+      { id: 'city-1', date: '14 Jul', amount: 31.00, status: 'Completed' },
+      { id: 'city-2', date: '14 Aug', amount: 31.00, status: 'Completed' },
+    ],
+  },
 ];
 
 export const getTransaction = (id: string) => transactions.find((item) => item.id === id);
